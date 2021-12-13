@@ -1,0 +1,12 @@
+test: parser search
+	echo before false
+	false
+	echo after false
+
+parser: parser.c card.h
+	cc -g -std=gnu11 -Wall -Werror -o parser parser.c
+
+#This is a comment
+
+search: search.c card.h
+	cc -g -std=gnu11 -Wall -Werror -o search search.c
